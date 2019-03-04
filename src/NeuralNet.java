@@ -36,7 +36,7 @@ public class NeuralNet {
             ArrayList<Neuron> currentLayer = (ArrayList<Neuron>) this.layers.get(l);
             for (Neuron neuron : currentLayer) {
                 if (l != 0 && l != this.layers.size() - 1)
-                    neuron.initialize((ArrayList<Neuron>) this.layers.get(l - 1), (ArrayList<Neuron>) this.layers.get(l + 1)); //TODO tu się wypierdala - out of bound exception
+                    neuron.initialize((ArrayList<Neuron>) this.layers.get(l - 1), (ArrayList<Neuron>) this.layers.get(l + 1)); 
                 else if (l == 0) {
                     neuron.initialize(null, (ArrayList<Neuron>) this.layers.get(l + 1));
                 } else if (l == this.layers.size() - 1) {

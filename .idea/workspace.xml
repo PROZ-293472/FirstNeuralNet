@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29fe4349-5b1e-4a4f-87fc-af62853f1578" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/NeuralNet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstNeuralNetwork/Executable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/Executable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstNeuralNetwork/NeuralNet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstNeuralNetwork/Neuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/Neuron.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Executable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Executable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NeuralNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NeuralNet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neuron.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Neuron.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="196">
               <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -37,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NeuralNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="128" column="42" lean-forward="true" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
+            <state relative-caret-position="59">
+              <caret line="38" column="127" selection-start-line="38" selection-start-column="127" selection-end-line="38" selection-end-column="127" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#217#225#0" expanded="true" />
@@ -52,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Executable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -122,7 +116,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551710381975" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551710516770" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -253,22 +247,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NeuralNet.java">
+    <entry file="file://$PROJECT_DIR$/src/Executable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="128" column="42" lean-forward="true" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#217#225#0" expanded="true" />
-            <element signature="e#282#290#0" expanded="true" />
-            <element signature="e#681#689#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Neuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="196">
           <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -281,10 +269,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Executable.java">
+    <entry file="file://$PROJECT_DIR$/src/NeuralNet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="59">
+          <caret line="38" column="127" selection-start-line="38" selection-start-column="127" selection-end-line="38" selection-end-column="127" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#217#225#0" expanded="true" />
+            <element signature="e#282#290#0" expanded="true" />
+            <element signature="e#681#689#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
