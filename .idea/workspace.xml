@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29fe4349-5b1e-4a4f-87fc-af62853f1578" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FirstNeuralNet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/Executable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/META-INF/FirstNeuralNet.kotlin_module" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/NeuralNet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/Neuron.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Executable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NeuralNet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Neuron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstNeuralNetwork/Executable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/Executable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstNeuralNetwork/NeuralNet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstNeuralNetwork/Neuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FirstNeuralNet/Neuron.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Executable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Executable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NeuralNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NeuralNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Neuron.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +20,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Neuron.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="434">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1671#1672#0" expanded="true" />
+                <element signature="e#1235#1236#0" expanded="true" />
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1299#1300#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
+                <element signature="e#1799#1800#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NeuralNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="104" column="113" selection-start-line="104" selection-start-column="113" selection-end-line="104" selection-end-column="113" />
+            <state relative-caret-position="946">
+              <caret line="128" column="42" lean-forward="true" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#217#225#0" expanded="true" />
@@ -55,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Executable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -87,15 +84,15 @@
         <option value="$PROJECT_DIR$/src/Connection.java" />
         <option value="$PROJECT_DIR$/src/Layer.java" />
         <option value="$PROJECT_DIR$/src/Executable.java" />
-        <option value="$PROJECT_DIR$/src/NeuralNet.java" />
         <option value="$PROJECT_DIR$/src/Neuron.java" />
+        <option value="$PROJECT_DIR$/src/NeuralNet.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
+    <option name="x" value="-11" />
+    <option name="y" value="31" />
+    <option name="width" value="1103" />
     <option name="height" value="960" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -125,7 +122,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551546401584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551710381975" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -184,7 +181,7 @@
       <window_info anchor="bottom" id="Messages" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.37300178" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.21847247" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
@@ -256,17 +253,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Executable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NeuralNet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="104" column="113" selection-start-line="104" selection-start-column="113" selection-end-line="104" selection-end-column="113" />
+        <state relative-caret-position="946">
+          <caret line="128" column="42" lean-forward="true" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#217#225#0" expanded="true" />
@@ -278,14 +268,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Neuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="434">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
-            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1235#1236#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Executable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>

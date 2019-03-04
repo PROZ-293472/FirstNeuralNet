@@ -8,6 +8,7 @@ import java.util.Vector;
 public class Neuron {
 
     private Double value;
+    private Double rawValue;
     public Vector<Double> outputWages = new Vector<>();
     public int layerIndex;
     public Double bias;
@@ -36,6 +37,10 @@ public class Neuron {
         return this.value;
     }
 
+    public Double getRawValue(){
+        return this.rawValue;
+    }
+
     public void setValue(Double val) {
         this.value = val;
     }
@@ -46,6 +51,7 @@ public class Neuron {
             sum += neuron.getValue() * neuron.outputWages.get(this.layerIndex);//TODO Check this
         }
         sum -= this.bias;
+        this.rawValue = sum;
         this.value = sigmoid(sum);
     }
 

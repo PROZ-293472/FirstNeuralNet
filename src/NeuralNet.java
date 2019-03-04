@@ -46,8 +46,8 @@ public class NeuralNet {
         }
     }
 
-    //Założenie - porcje danych idealnie pasują do liczby neuronów na wejściu
-    //Założenie - są dwa pliki: Wejścia i Wyjścia
+    //Assumption - data portion matches the input and target values
+    //Assumption - there are three separate files: inputs, targets and results (results will be created during process)
     private void loadInput(File file) {
         Scanner scanner;
         for (Neuron iNeuron : this.inputs) {
@@ -64,7 +64,6 @@ public class NeuralNet {
             }
         }
     }
-
 
     public void getResult(File file) {
         try {
@@ -87,14 +86,53 @@ public class NeuralNet {
         }
     }
 
+
+
     public void feedForward(File file) {
         loadInput(file);
         updateAll();
     }
 
-    public void backProp() {
+    private Double costFunction(ArrayList<Double> targetVals) {
+        Double sum = 0.0;
+        for(Neuron neuron: this.outputs){
+            Double temp = (neuron.getValue() - targetVals.get(neuron.layerIndex));
+            temp *= temp;
+            sum+=temp;
+        }
+        sum = sum/this.outputs.size();
+        return sum;
     }
 
+    /*
+    ***********************
+    * BACKPROP FORMULAS****
+    * *********************
+    TODO: dE/dw_ij = dE/do_j * do_j/dnet_j * dnet_j/dw_ij
+    E - squared error
+    w_ij - weight of i wage in each neuron of j layer
+    o_j - value of each neuron in j layer
+    net_j - sum of wages and values (aka neuron without sigmoid function)
+
+    dnet_j/dw_ij = o_i
+
+    do_j/dnet_j = sigmoid(net_j)(1-sigmoid(net_j)
+
+    dE/do_j = y - t
+    y - actual output of a neuron
+    t - target output of a neuron
+
+    TODO FINAL FORMULA: dE/dw_ij = delta_j*o_j
+    delta_j =
+    1) for j - output neuron: (o_j - t_j)*o_j*(1-o_j)
+    2) for j - inner neuron: (sum by l in L (w_jl*delta_l))*o_j*(1-o_j)
+    Where L is a set of all neurons receiving input from j
+
+    NOTE: delta is a recursive function!
+    */
+    private void delta(){}
+
+    public void backPropagate(){}
 
 
     /*--------------------pomocnicze ----------------------------------*/
