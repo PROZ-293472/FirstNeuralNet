@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.ListIterator;
 import java.util.Scanner;
 
 public class NeuralNet {
@@ -102,31 +101,31 @@ public class NeuralNet {
     }
 
     public void updateWeights() {
-        for (int i = 1; i<this.layers.size(); i++){
-            ArrayList<Neuron> currLayer = (ArrayList<Neuron>)layers.get(i);
-            ArrayList<Neuron> prevLayer = (ArrayList<Neuron>)layers.get(i-1); //I don't know chief, looks sketchy
-            for(Neuron currNeuron : currLayer){
-                for (Neuron prevNeuron: prevLayer){
+        for (int i = 1; i < this.layers.size(); i++) {
+            ArrayList<Neuron> currLayer = (ArrayList<Neuron>) layers.get(i);
+            ArrayList<Neuron> prevLayer = (ArrayList<Neuron>) layers.get(i - 1); //I don't know chief, looks sketchy
+            for (Neuron currNeuron : currLayer) {
+                for (Neuron prevNeuron : prevLayer) {
                     Double correction = -this.etha * prevNeuron.getValue() * currNeuron.error;
                     Double temp = prevNeuron.outputWages.get(currNeuron.layerIndex);
                     temp += correction;
                     prevNeuron.outputWages.set(currNeuron.layerIndex, temp); //Clumsy as hell, but you gotta do what you gotta do
                 }
-                Double biasCorrection = -this.etha  * currNeuron.error;
+                Double biasCorrection = -this.etha * currNeuron.error;
                 currNeuron.bias += biasCorrection;
             }
         }
     }
 
     //------------------FOR TEST PURPOSES ------------------------//
-    public void train(Double[] inputs, Double[] outputs){
+    public void testTrain(Double[] inputs, Double[] outputs) {
 
         if (inputs.length != this.inputs.size() || outputs.length != this.outputs.size()) return;
-        for (int i = 0; i< inputs.length; i++){
+        for (int i = 0; i < inputs.length; i++) {
             this.inputs.get(i).setValue(inputs[i]);
         }
         ArrayList<Double> targets = new ArrayList<>();
-        for (int i = 0; i< outputs.length; i++){
+        for (int i = 0; i < outputs.length; i++) {
             targets.add(outputs[i]);
         }
         updateAll();
@@ -137,48 +136,58 @@ public class NeuralNet {
     //----------------------FILE SYSTEM---------------------------//
     //Assumption - data portion matches the input and target values
     //Assumption - there are three separate files: inputs, targets and results (results will be created during process)
-    private void loadInput(File file) {
-        Scanner scanner;
-        for (Neuron iNeuron : this.inputs) {
-            try {
-                scanner = new Scanner(file);
-
-                while (scanner.hasNextDouble()) {
-                    iNeuron.setValue(scanner.nextDouble());
-                }
-
-            } catch (FileNotFoundException e1) {
-                e1.printStackTrace();
-                System.out.println("Exception in loadInput");
-            }
-        }
-    }
-
-    public void getResult(File file) {
+    public void loadInput(String filePath) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream(file.getPath());
-            try {
-                DataOutputStream dataOutputStream = new DataOutputStream(fileOutputStream);
-                for (Neuron neuron : this.outputs) {
-                    Double value = neuron.getValue();
-                    dataOutputStream.writeDouble(value);
-                    dataOutputStream.writeChar(' ');
-                }
+            FileReader fin = new FileReader(filePath);
+            Scanner src = new Scanner(fin);
 
-                dataOutputStream.writeChar('\n');
-            } catch (IOException ioe) {
-                ioe.printStackTrace();
-                System.out.println("Error in write Double");
+            for (Neuron neuron : this.inputs) {
+                if (src.hasNextDouble()) {
+                    Double temp = src.nextDouble();
+                    neuron.setValue(temp);
+                }
             }
-        } catch (FileNotFoundException fnfe) {
-            System.out.println("Error in writing to file. No such file");
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+            System.out.println("File not found");
+        }
+    }
+
+    private ArrayList<Double> getTarget(String filePath){
+        try {
+            FileReader fin = new FileReader(filePath);
+            Scanner src = new Scanner(fin);
+            ArrayList<Double> targets = new ArrayList<>();
+
+            for (int i = 0; i < this.outputs.size(); i++) {
+                if(src.hasNextDouble()){
+                    targets.add(src.nextDouble());
+                }
+            }
+            return targets;
+        }catch (FileNotFoundException fnfe){
+            System.out.println("File not found");
+            return  null;
+        }
+    }
+
+    public void getResult(String filePath) {
+        try {
+            FileWriter fout = new FileWriter(filePath);
+            fout.write(outputToString());
+            fout.close();
+        }catch (IOException ioe){
+            System.out.println("Error with writing to file");
         }
     }
 
 
-    public void feedForward(File file) {
-        loadInput(file);
+    public void train(String inputFilePath, String targetFilePath) {
+        loadInput(inputFilePath);
+        ArrayList<Double> target = getTarget(targetFilePath);
         updateAll();
+        backPropErrors(target);
+        updateWeights();
     }
     /*--------------------utils----------------------------------*/
 
@@ -191,9 +200,20 @@ public class NeuralNet {
         }
     }
 
-    public void printOutput(){
+
+
+    private String outputToString(){
+        String str = "The output is: ";
+        for (Neuron neuron : this.outputs) {
+            str += neuron.getValue() + " ";
+        }
+        return str;
+    }
+
+
+    public void printOutput() {
         String printMe = "The output is: ";
-        for(Neuron neuron: this.outputs){
+        for (Neuron neuron : this.outputs) {
             printMe += neuron.getValue() + " ";
         }
         System.out.println(printMe);
